@@ -21,7 +21,7 @@ name = "supergrafx_rust"
 # use). Nothing is copied from either. To build against a local checkout of the base board
 # instead, without editing this file:
 #   cargo build --config 'patch."https://github.com/alewman/pcengine-rust".pcengine-rust.path="../pcengine-rust"'
-pcengine_rust = { package = "pcengine-rust", git = "https://github.com/alewman/pcengine-rust", rev = "8f672f00818bf4ccb7aa90ca2916a00f47ba92d6" }
+pcengine_rust = { package = "pcengine-rust", git = "https://github.com/alewman/pcengine-rust", rev = "655c479da5241b409b1b6237a6ff89b91570cee5" }  # 655c479: its history reset (2026-11-21), 8f672f0's board
 # The VPC's part of a save state (sockets::DeviceState) and the known cards' SHA-1.
 serde = { version = "1", features = ["derive"] }
 bincode = "1.3"

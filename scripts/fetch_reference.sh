@@ -23,7 +23,7 @@ fetch() {  # name, the pinned commit (and the release it is)
     echo "$1 ${3:-} ($2) in $dest"
 }
 mkdir -p "$ROOT/external"
-fetch supergrafx-python 83477041a8d4ce69b93ada7463d20d3b9481e50a
-fetch pcengine-python 03ac6998c812a291e5f91882552df5ae712ba870
-fetch huc6280-python 6ce348e13c9ef3009bd07e7938c4b48956eeadc6
+fetch supergrafx-python 7f801cdf9510c0c483e0b63ca9ec13042545d633  # history resets of 2026-11-21: same code as 8347704
+fetch pcengine-python 647de63f60ce7a6a74f584c4e37673c2ba1505ba  # 03ac699's board
+fetch huc6280-python 5cff9e8afa68cf3e0b8507ddfd84c8a36f4b2c21  # 6ce348e's core
 fetch 6502-python 2146eba3b3da4d2cc6c8fa3994f100bcb5abf039

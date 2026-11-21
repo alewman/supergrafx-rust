@@ -94,7 +94,7 @@ dependencies = [
 [[package]]
 name = "huc6280-rust"
 version = "0.2.0"
-source = "git+https://github.com/alewman/huc6280-rust?rev=e1d24a395743779d5fa13aa70e7590f4821345f3#e1d24a395743779d5fa13aa70e7590f4821345f3"
+source = "git+https://github.com/alewman/huc6280-rust?rev=1bb840db54a4ccae823a5109e3e98e4d2bb8023c#1bb840db54a4ccae823a5109e3e98e4d2bb8023c"
 dependencies = [
  "serde",
  "serde_json",
@@ -132,7 +132,7 @@ dependencies = [
 [[package]]
 name = "pcengine-rust"
 version = "0.2.0"
-source = "git+https://github.com/alewman/pcengine-rust?rev=8f672f00818bf4ccb7aa90ca2916a00f47ba92d6#8f672f00818bf4ccb7aa90ca2916a00f47ba92d6"
+source = "git+https://github.com/alewman/pcengine-rust?rev=655c479da5241b409b1b6237a6ff89b91570cee5#655c479da5241b409b1b6237a6ff89b91570cee5"
 dependencies = [
  "bincode",
  "flate2",
