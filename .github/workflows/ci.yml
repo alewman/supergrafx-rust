@@ -1,0 +1,37 @@
+# SPDX-License-Identifier: MIT
+name: CI
+
+# Kept small: main and pull requests, superseded runs cancelled. The lockstep
+# gate (rungs 2-6) needs the reference on PyPy and the SuperGrafx cards, which
+# are the user's, and runs by hand (README). CI runs the build, the
+# transcribed unit tests (rung 1; the Covell test is skipped without $COVELL)
+# and the library for wasm32-unknown-unknown.
+#
+# pcengine-rust comes in by its git pin (Cargo.toml), and through it
+# huc6280-rust by the base board's own git pin.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: fmt, clippy, test, wasm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
+      - run: cargo fmt --check
+      - run: cargo clippy --release --all-targets -- -D warnings
+      - run: cargo test --release
+      - run: cargo build --release --lib --target wasm32-unknown-unknown

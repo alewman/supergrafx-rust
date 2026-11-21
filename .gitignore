@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: MIT
+/target
+/external
+/scratch
+__pycache__/
+*.pce
+*.sgx
+*.7z
+*.zip
+*.chd
+*.cue
+*.iso
+*.bin

@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: MIT
+# name	frames	image	arguments (scripts/sgx_lockstep.py; the groups are the rungs' in the README)
+covell	60	$COVELL	
+probe	120	$PROBE	
+lib-1941 - Counter Attack (Japan)	600	$LIB/1941 - Counter Attack (Japan).zip	--press run@250+10
+lib-Aldynes - The Misson Code for Rage Crisis (Japan) (En)	600	$LIB/Aldynes - The Misson Code for Rage Crisis (Japan) (En).zip	--press run@250+10
+lib-Battle Ace (Japan) (En)	600	$LIB/Battle Ace (Japan) (En).zip	--press run@250+10
+lib-Daimakaimura (Japan) (En)	600	$LIB/Daimakaimura (Japan) (En).zip	--press run@250+10
+lib-Madou King Granzort (Japan) (En)	600	$LIB/Madou King Granzort (Japan) (En).zip	--press run@250+10
+dmm-stage1	1800	$LIB/Daimakaimura (Japan) (En).zip	--press run@400+10 --press run@700+10
+dmm-stage1-sgxtech	1800	$LIB/Daimakaimura (Japan) (En).zip	--press run@400+10 --press run@700+10 --vpc PRIORITY_LABELS=sgxtech
+dmm-compat	300	$LIB/Daimakaimura (Japan) (En).zip	--mode compat
+sw-off-dmm	1800	$LIB/Daimakaimura (Japan) (En).zip	--press run@400+10 --press run@700+10 --vpc WINDOW_OFF_AT_OR_BELOW=1023
+sw-labels-probe	120	$PROBE	--vpc PRIORITY_LABELS=sgxtech
+sw-origin-probe	120	$PROBE	--vpc WINDOW_ORIGIN=40,40,40
+sw-off-probe	120	$PROBE	--vpc WINDOW_OFF_AT_OR_BELOW=256
+sw-compat-at-probe	120	$PROBE	--compat-at 60
+sw-steers-probe	120	$PROBE	--compat-at 60 --vpc ST_STEERS_IN_COMPAT=true
+sw-compat-probe	120	$PROBE	--mode compat
+sw-seed-probe	120	$PROBE	--seed 6202
+sw-base-probe	120	$PROBE	--mode base
+gate-covell-base	60	$COVELL	--mode base
+gate-covell-compat	60	$COVELL	--mode compat
+gate-dmm-base	300	$LIB/Daimakaimura (Japan) (En).zip	--mode base
