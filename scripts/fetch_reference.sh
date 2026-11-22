@@ -26,4 +26,4 @@ mkdir -p "$ROOT/external"
 fetch supergrafx-python 7f801cdf9510c0c483e0b63ca9ec13042545d633  # history resets of 2026-11-21: same code as 8347704
 fetch pcengine-python 647de63f60ce7a6a74f584c4e37673c2ba1505ba  # 03ac699's board
 fetch huc6280-python 5cff9e8afa68cf3e0b8507ddfd84c8a36f4b2c21  # 6ce348e's core
-fetch 6502-python 2146eba3b3da4d2cc6c8fa3994f100bcb5abf039
+fetch 6502-python 58d6d32d2cea5749134885be0c6eff7eed29cb41  # 2146eba after the history rewrite of 2026-11-21 (same tree)
